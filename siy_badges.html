@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<header>
+    <div class="container">
+        <div class="slogan"></div>
+            <p class="tagline bordered-text-alt">SIY Badg.ES</p>
+        </div>
+    </div>
+</header>
+<section id="about" class="section-odd">
+<div class="container">
+    <div class="features">
+    {%- for siy_badge in site.siy_badges -%}
+        <div class="feature-card">
+            <div class="feature-img">
+                <img src= {{ siy_badge.img }} alt="SIY Badg.ES">
+            </div>
+            <h3 class="translate" data-en="{{ siy_badge.title-en | escape }}" data-es="{{ siy_badge.title-es | escape }}"> {{ siy_badge.title-es | escape }} </h3>
+            <p class="translate" data-en="{{ siy_badge.description-en | escape }}" data-es="{{ siy_badge.description-es | escape }}"> {{ siy_badge.description-es | escape }} </p>
+        </div>
+   {%- endfor -%}
+    </div>
+</div>
+</section>
+<section id="contact" class="section-odd">
+    <div class="container">
+        <h2 class="translate" data-en="Contact us for quote" data-es="Contáctanos para presupuesto">Contáctanos para presupuesto</h2>
+        <div class="contact-links">
+            <a href="https://github.com/thebadg-es" target="_blank" class="contact-link">
+                <img src="assets/icons/github.svg" alt="GitHub" class="contact-icon">
+            </a>
+            <a href="https://x.com/TheBadg_ES" target="_blank" class="contact-link">
+                <img src="assets/icons/x.svg" alt="Twitter" class="contact-icon">
+            </a>
+            <a href="https://instagram.com/thebadg.es" target="_blank" class="contact-link">
+                <img src="assets/icons/instagram.svg" alt="Instagram" class="contact-icon">
+            </a>
+            <a href="mailto:info@thebadg.es" class="contact-link">
+                <img src="assets/icons/email.svg" alt="Email" class="contact-icon">
+            </a>
+        </div>
+    </div>
+</section>
+
+<script src="js/scripts.js"></script>

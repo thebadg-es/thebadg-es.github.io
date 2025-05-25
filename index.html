@@ -1,162 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheBadg.ES</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
-</head>
-<body>
+---
+layout: default
+---
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="navbar-logo">
-                <a href="index.html">
-                    <img src="images/TheBadg.ES Logo.svg" alt="main_logo">
-                </a>
+<header>
+    <div class="slogan"></div>
+        <p class="tagline bordered-text-alt">If you can dream it, we can Badge it.</p>
+    </div>
+</header>
+
+<section id="about" class="section-odd">
+    <h2 class="translate" data-en="Make it different" data-es="Marca la diferencia">Marca la diferencia</h2>
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-img">
+                <img src="assets/about/design.svg" alt="Mini Badg.ES">
             </div>
-            
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link translate" data-en="About" data-es="Acerca de">Acerca de</a></li>
-                <li><a href="#badges" class="nav-link translate" data-en="Badg.ES" data-es="Badg.ES">Badg.ES</a></li>
-                <li><a href="#contact" class="nav-link translate" data-en="Contact" data-es="Contacto">Contacto</a></li>
-                <div class="language-selector">
-                    <span class="language-option active" data-lang="es" onclick="changeLanguage('es')">ES</span> |
-                    <span class="language-option" data-lang="en" onclick="changeLanguage('en')">EN</span>
-                </div>
-            </ul>
+            <h3 class="translate" data-en="CUSTOM DESIGN" data-es="DISEÑO PERSONALIZADO">DISEÑO PERSONALIZADO</h3>
+            <p class="translate" data-en="Unique badge designs tailored to your event's branding and theme." data-es="Diseños únicos adaptados a la marca y tema de tu evento.">Diseños únicos adaptados a la marca y tema de tu evento.</p>
         </div>
-    </nav>
-    
-    <header>
-        <div class="container">
-            <div class="slogan"></div>
-                <p class="tagline bordered-text-alt">If you can dream it, we can Badge it.</p>
+        <div class="feature-card">
+            <div class="feature-img">
+                <img src="assets/about/personal.svg" alt="Mini Badg.ES">
             </div>
+            <h3 class="translate" data-en="SPECIAL TOUCH" data-es="TOQUE ESPECIAL">TOQUE ESPECIAL</h3>
+            <p class="translate" data-en="Make your event stand out! Give your attendees a special touch with custom badges." data-es="¡Haz tu evento único! Da a tus asistentes un toque especial con badges personalizadas.">¡Haz tu evento único! Da a tus asistentes un toque especial con badges personalizadas.</p>
         </div>
-    </header>
-    
-    <section id="about" class="section-odd">
-        <div class="container">
-            <h2 class="translate" data-en="Make it different" data-es="Marca la diferencia">Marca la diferencia</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="images/about/design.svg" alt="Mini Badg.ES">
-                    </div>
-                    <h3 class="translate" data-en="CUSTOM DESIGN" data-es="DISEÑO PERSONALIZADO">DISEÑO PERSONALIZADO</h3>
-                    <p class="translate" data-en="Unique badge designs tailored to your event's branding and theme." data-es="Diseños únicos adaptados a la marca y tema de tu evento.">Diseños únicos adaptados a la marca y tema de tu evento.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="images/about/personal.svg" alt="Mini Badg.ES">
-                    </div>
-                    <h3 class="translate" data-en="SPECIAL TOUCH" data-es="TOQUE ESPECIAL">TOQUE ESPECIAL</h3>
-                    <p class="translate" data-en="Make your event stand out! Give your attendees a special touch with custom badges." data-es="¡Haz tu evento único! Da a tus asistentes un toque especial con badges personalizadas.">¡Haz tu evento único! Da a tus asistentes un toque especial con badges personalizadas.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="images/about/ontime.svg" alt="Mini Badg.ES">
-                    </div>
-                    <h3 class="translate" data-en="ON TIME!" data-es="¡A TIEMPO!">¡A TIEMPO!</h3>
-                    <p class="translate" data-en="Fast production and delivery to meet your event deadlines with confidence." data-es="Producción y entrega rápidas para cumplir los plazos de tu evento con total confianza.">Producción y entrega rápidas para cumplir los plazos de tu evento con total confianza.</p>
-                </div>
+        <div class="feature-card">
+            <div class="feature-img">
+                <img src="assets/about/ontime.svg" alt="Mini Badg.ES">
             </div>
+            <h3 class="translate" data-en="ON TIME!" data-es="¡A TIEMPO!">¡A TIEMPO!</h3>
+            <p class="translate" data-en="Fast production and delivery to meet your event deadlines with confidence." data-es="Producción y entrega rápidas para cumplir los plazos de tu evento con total confianza.">Producción y entrega rápidas para cumplir los plazos de tu evento con total confianza.</p>
         </div>
-    </section>
-    
-    <section id="badges" class="section-even">
-        <div class="container">
-            <h2 class="translate" data-en="Our Badg.ES" data-es="Nuestras Badg.ES">Nuestras Badg.ES</h2>
-            <div class="badge-grid">
-                <a href="badge-mini-wip.html" class="badge-card">
-                    <div class="badge-img">
-                        <img src="images/badges/mini.svg" alt="Mini Badg.ES">
-                    </div>
-                    <div class="badge-info">
-                        <h3 class="badge-title">Mini Badg.ES</h3>
-                        <p class="badge-description translate" data-en="Vibrant, customized, and stylish. Perfect for adding a unique touch to your event." data-es="Vibrantes, personalizadas y llenas de estilo. Ideales para darle un toque único a tu evento.">Vibrantes, personalizadas y llenas de estilo. Ideales para darle un toque único a tu evento.</p>
-                    </div>
-                    <div class="badge-price">
-                        <p class="translate" data-en="Contact us for quote" data-es="Contáctanos para presupuesto">Contáctanos para presupuesto</p>
-                    </div>         
-                </a>
-                
-                <a href="badge-siy-wip.html" class="badge-card">
-                    <div class="badge-img">
-                        <img src="images/badges/siy.svg" alt="Mini Badg.ES">
-                    </div>
-                    <div class="badge-info">
-                        <h3 class="badge-title">SIY Badg.ES</h3>
-                        <p class="badge-description translate" data-en="Solder It Yourself! Customizable soldering kits." data-es="Solder It Yourself! Kits de soldadura personalizables.">Solder It Yourself! Kits de soldadura personalizables.</p>
-                    </div>
-                    <div class="badge-price">
-                        <p class="translate" data-en="Contact us for quote" data-es="Contáctanos para presupuesto">Contáctanos para presupuesto</p>
-                    </div>        
-                </a>
-                
-                <a href="badge-info-wip.html" class="badge-card">
-                    <div class="badge-img">
-                        <img src="images/badges/info.svg" alt="Mini Badg.ES">
-                    </div>
-                    <div class="badge-info">
-                        <h3 class="badge-title">InfoBadge2040</h3>
-                        <p class="badge-description translate" data-en="Perfect to interact with other attendees in all kind of events." data-es="Perfectas interacturar con los asistentes en todo tipo de eventos.">Perfectas interacturar con los asistentes en todo tipo de eventos.</p>
-                    </div>
-                    <div class="badge-price">
-                        <p class="translate" data-en="Contact us for quote" data-es="Contáctanos para presupuesto">Contáctanos para presupuesto</p>        
-                    </div>
-                </a>
-                
-                <a href="badge-usb-wip.html" class="badge-card">
-                    <div class="badge-img">
-                        <img src="images/badges/usb-c.svg" alt="Mini Badg.ES">
-                    </div>
-                    <div class="badge-info">
-                        <h3 class="badge-title">USB-C* Bagd.ES</h3>
-                        <p class="badge-description translate" data-en="Customize and surprise with this USB data blocker." data-es="Personaliza y sorprende con este bloqueador de datos USB.">Personaliza y sorprende con este bloqueador de datos USB.</p>
-                    </div>
-                    <div class="badge-price">
-                        <p class="translate" data-en="Contact us for quote" data-es="Contáctanos para presupuesto">Contáctanos para presupuesto</p>
-                    </div>        
-                </a>
+    </div>
+</section>
+
+<section id="badges" class="section-even">
+    <h2 class="translate" data-en="Our Badg.ES" data-es="Nuestras Badg.ES">Nuestras Badg.ES</h2>
+    <div class="badge-grid">
+        <a href="mini_badges.html" class="badge-card">
+            <div class="badge-img">
+                <img src="assets/badges/mini.svg" alt="Mini Badg.ES">
             </div>
-        </div>
-    </section>
-    <section id="contact" class="section-odd">
-        <div class="container">
-            <h2 class="translate" data-en="Get in Touch" data-es="Contáctanos">Contáctanos</h2>
-            <div class="contact-links">
-                <a href="https://github.com/thebadg-es" target="_blank" class="contact-link">
-                    <img src="images/icons/github.svg" alt="GitHub" class="contact-icon">
-                </a>
-                <a href="https://x.com/TheBadg_ES" target="_blank" class="contact-link">
-                    <img src="images/icons/x.svg" alt="Twitter" class="contact-icon">
-                </a>
-                <a href="https://instagram.com/thebadg.es" target="_blank" class="contact-link">
-                    <img src="images/icons/instagram.svg" alt="Instagram" class="contact-icon">
-                </a>
-                <a href="mailto:info@thebadg.es" class="contact-link">
-                    <img src="images/icons/email.svg" alt="Email" class="contact-icon">
-                </a>
+            <div class="badge-info">
+                <h3 class="badge-title">Mini Badg.ES</h3>
+                <p class="badge-description translate" data-en="Vibrant, customized, and stylish. Perfect for adding a unique touch to your event." data-es="Vibrantes, personalizadas y llenas de estilo. Ideales para darle un toque único a tu evento.">Vibrantes, personalizadas y llenas de estilo. Ideales para darle un toque único a tu evento.</p>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="container-logo">
-                <img src="images/TheBadg.ES Logo.svg" alt="main_logo"> 
+            <div class="badge-price">
+                <p class="translate" data-en="See more" data-es="Ver más">Ver más</p>
+            </div>         
+        </a>
+        
+        <a href="siy_badges.html" class="badge-card">
+            <div class="badge-img">
+                <img src="assets/badges/siy.svg" alt="Mini Badg.ES">
             </div>
-            <p class="copyright translate" data-en="© 2025 TheBadg.ES. All rights reserved." data-es="© 2025 TechBadges. Todos los derechos reservados.">© 2025 TechBadges. All rights reserved.</p>
+            <div class="badge-info">
+                <h3 class="badge-title">SIY Badg.ES</h3>
+                <p class="badge-description">Solder It Yourself!</p>
+                <p class="badge-description translate" data-en="Customizable soldering kits." data-es="Kits de soldadura personalizables.">Kits de soldadura personalizables.</p>
+            </div>
+            <div class="badge-price">
+                <p class="translate" data-en="See more" data-es="Ver más">Ver más</p>
+            </div>        
+        </a>
+        
+        <a href="infobadge.html" class="badge-card">
+            <div class="badge-img">
+                <img src="assets/badges/info.svg" alt="Mini Badg.ES">
+            </div>
+            <div class="badge-info">
+                <h3 class="badge-title">InfoBadge2040</h3>
+                <p class="badge-description translate" data-en="Perfect to interact with other attendees in all kind of events." data-es="Perfectas interacturar con los asistentes en todo tipo de eventos.">Perfectas interacturar con los asistentes en todo tipo de eventos.</p>
+            </div>
+            <div class="badge-price">
+                <p class="translate" data-en="See more" data-es="Ver más">Ver más</p>
+            </div>
+        </a>
+        
+        <a href="usb_badge.html" class="badge-card">
+            <div class="badge-img">
+                <img src="assets/badges/usb-c.svg" alt="Mini Badg.ES">
+            </div>
+            <div class="badge-info">
+                <h3 class="badge-title">USB-C* Bagd.ES</h3>
+                <p class="badge-description translate" data-en="Customize and surprise with this USB data blocker." data-es="Personaliza y sorprende con este bloqueador de datos USB.">Personaliza y sorprende con este bloqueador de datos USB.</p>
+            </div>
+            <div class="badge-price">
+                <p class="translate" data-en="See more" data-es="Ver más">Ver más</p>
+            </div>        
+        </a>
+    </div>
+</section>
+
+<section id="contact" class="section-odd">
+    <div class="container">
+        <h2 class="translate" data-en="Get in Touch" data-es="Contáctanos">Contáctanos</h2>
+        <div class="contact-links">
+            <a href="https://github.com/thebadg-es" target="_blank" class="contact-link">
+                <img src="assets/icons/github.svg" alt="GitHub" class="contact-icon">
+            </a>
+            <a href="https://x.com/TheBadg_ES" target="_blank" class="contact-link">
+                <img src="assets/icons/x.svg" alt="Twitter" class="contact-icon">
+            </a>
+            <a href="https://instagram.com/thebadg.es" target="_blank" class="contact-link">
+                <img src="assets/icons/instagram.svg" alt="Instagram" class="contact-icon">
+            </a>
+            <a href="mailto:info@thebadg.es" class="contact-link">
+                <img src="assets/icons/email.svg" alt="Email" class="contact-icon">
+            </a>
         </div>
-    </footer>
-    <script src="js/scripts.js"></script>
-</body>
-</html>
+    </div>
+</section>
+
+<script src="js/scripts.js"></script>
+
