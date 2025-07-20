@@ -247,6 +247,9 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    max-width: 100%; /* Prevent overflow on smaller screens */
+    margin-left: 3rem; /* Add left margin for spacing */
+    margin-right: 3rem;
 }
 
 .feature-card {
@@ -296,7 +299,7 @@ h2 {
     gap: 2rem; /* Space between grid items */
     justify-content: center; /* Center the grid items horizontally */
     max-width: 100%; /* Prevent overflow on smaller screens */
-    margin-left: 5rem;
+    margin-left: 3rem; /* Add left margin for spacing */
     margin-right: 3rem;
 }
 
