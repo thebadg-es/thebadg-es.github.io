@@ -179,10 +179,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;           /* Ensure full width */
+    text-align: center;    /* Fallback for inline elements */
 }
 
 .container-logo img {
-    height: 100px; /* Adjust image height */
+    height: 100%; /* Adjust image height */
     width: auto; /* Maintain aspect ratio */
     vertical-align: middle;
 }
