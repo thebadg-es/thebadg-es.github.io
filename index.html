@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>thebadg.es | Event Tech Badges</title>
+    <meta
+      name="description"
+      content="thebadg.es designs and manufactures electronic event badges, from battery-powered flash LED badges to battery-less RP2040 e-ink InfoBadge2040."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <img src="logo/logo.png" alt="thebadg.es" />
+        </a>
+        <nav class="nav-links">
+          <a href="#products">Products</a>
+          <a href="#infobadge">InfoBadge2040</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-content">
+          <div>
+            <p class="eyebrow">Built for technology events</p>
+            <h1>Badges that light up the room and the network.</h1>
+            <p class="lead">
+              thebadg.es designs and manufactures electronic badges for conferences,
+              hackathons, and community gatherings. From minimalist battery-powered flash LED
+              builds to a full e-ink battery-less InfoBadge2040 powered by RP2040.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#infobadge">Configure an InfoBadge2040</a>
+              <a class="btn ghost" href="#products">Explore the lineup</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span class="tag">Battery Series</span>
+              <span class="tag">RP2040 InfoBadge2040</span>
+            </div>
+            <h3>Event-ready hardware</h3>
+            <p>
+              Designed for quick deployment, reliable power, and an experience that feels
+              unmistakably tech-forward.
+            </p>
+            <div class="hero-stats">
+              <div>
+                <span class="stat">1</span>
+                <span class="stat-label">switch</span>
+              </div>
+              <div>
+                <span class="stat">1</span>
+                <span class="stat-label">flash LED</span>
+              </div>
+              <div>
+                <span class="stat">1</span>
+                <span class="stat-label">coin cell</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-glow"></div>
+      </section>
+
+      <section id="products" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Product lineup</h2>
+            <p>Purpose-built badges for every event scale.</p>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <h3>Battery Flash Badge</h3>
+              <p>
+                Minimalist and powerful. A battery, a single switch, and a high
+                impact flash LED to keep attendees visible and energized.
+              </p>
+              <ul class="list">
+                <li>Ultra-lightweight PCB</li>
+                <li>Instant on/off control</li>
+                <li>Event branding ready</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>InfoBadge2040</h3>
+              <p>
+                A battery-less programmable identity badge with a crisp e-ink display. Perfect for
+                speaker profiles, community roles, and QR-based networking. Fully hackable—run your own
+                firmware using Arduino IDE or Raspberry Pi SDK.
+              </p>
+              <ul class="list">
+                <li>Battery-less design</li>
+                <li>Low-power e-ink display</li>
+                <li>UART programming</li>
+                <li>Built-in QR generation</li>
+                <li>Hackable (Arduino IDE / Pi SDK)</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Custom Event Runs</h3>
+              <p>
+                From unique silhouettes to themed LEDs, we deliver limited runs with
+                tailored art, assembly, and QA. We can also organize soldering workshops
+                where attendees build and customize their own badges.
+              </p>
+              <ul class="list">
+                <li>Prototype to production</li>
+                <li>Artwork + silkscreen support</li>
+                <li>Soldering workshops</li>
+                <li>Tested before delivery</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="infobadge" class="section alt">
+        <div class="container">
+          <div class="section-title">
+            <h2>InfoBadge2040 configurator</h2>
+            <p>Prepare the UART payload for your RP2040 e-ink badge.</p>
+          </div>
+          <div class="configurator">
+            <form class="config-form" id="infobadge-form">
+              <label>
+                Name
+                <input type="text" name="person" placeholder="Ada Lovelace" />
+              </label>
+              <label>
+                Role
+                <input type="text" name="role" placeholder="Security Researcher" />
+              </label>
+              <label>
+                Company
+                <input type="text" name="company" placeholder="thebadg.es" />
+              </label>
+              <label>
+                X / Facebook
+                <input type="text" name="social" placeholder="@handle" />
+              </label>
+              <label>
+                Webpage (for QR)
+                <input type="text" name="qr" placeholder="https://thebadg.es" />
+              </label>
+            </form>
+            <div class="config-output">
+              <div class="output-header">
+                <h3>Configuration</h3>
+                <div class="output-actions">
+                  <button class="btn small ghost" id="uart-connect" type="button">
+                    Connect
+                  </button>
+                  <button class="btn small" id="uart-send" type="button" disabled>
+                    Send configuration
+                  </button>
+                </div>
+              </div>
+              <p class="helper">
+                Send the 5 lines in order over UART. Each line is one field.
+              </p>
+              <p class="helper uart-status" id="uart-status">
+                UART status: not connected.
+              </p>
+              <textarea id="payload" style="display: none;"></textarea>
+              <div class="preview">
+                <span class="preview-label">Preview</span>
+                <div class="preview-card" id="preview-card">
+                  <div class="preview-content">
+                    <div class="preview-text">
+                      <div class="preview-name" id="preview-name">Ada Lovelace</div>
+                      <div class="preview-role" id="preview-role">Security Researcher</div>
+                      <div class="preview-company" id="preview-company">thebadg.es</div>
+                      <div class="preview-social-box">
+                        <div class="preview-social" id="preview-social">@handle</div>
+                      </div>
+                    </div>
+                    <div class="preview-qr-box" id="preview-qr-container">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="note">
+                <h4>QR Code</h4>
+                  <p>
+                    The badge generates the QR on-device using the last field. Keep the
+                    URL short for best results.
+                  </p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our process</h2>
+            <p>From concept to conference in a clean, fast pipeline.</p>
+          </div>
+          <div class="timeline">
+            <div>
+              <h3>Design + Prototyping</h3>
+              <p>We align on event goals, then produce quick-turn prototypes.</p>
+            </div>
+            <div>
+              <h3>Manufacturing</h3>
+              <p>Full PCB fabrication, assembly, and thorough testing.</p>
+            </div>
+            <div>
+              <h3>Delivery</h3>
+              <p>Badges arrive organized, labeled, and ready for distribution.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container contact">
+          <div>
+            <h2>Let's build your next badge.</h2>
+            <p>
+              Tell us about your event size, concept, and timeline. We'll handle the
+              hardware, the experience, and the details.
+            </p>
+          </div>
+          <div class="contact-card">
+            <p class="contact-label">Reach out</p>
+            <p class="contact-value">hello@thebadg.es</p>
+            <p class="contact-label">Location</p>
+            <p class="contact-value">Europe</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>thebadg.es | Electronic badges for technology events.</span>
+        <a href="privacy.html" style="margin-left: 20px; color: var(--green-mid);">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
